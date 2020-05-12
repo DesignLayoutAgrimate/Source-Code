@@ -35,7 +35,7 @@
 		</tr>
 		<?php
 		while($myrow = pg_fetch_assoc($ret)){
-		print("<tr><td>%s</td> <td>%s</td></tr>", $myrow['username'],$myrow['password']);
+		printf("<tr><td>%s</td> <td>%s</td></tr>", $myrow['username'],$myrow['password']);
 		}
 		pg_close($db);
 		?>
