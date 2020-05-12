@@ -1,36 +1,8 @@
 <!DOCTYPE html>
 <html>
-<style>
-input[type=text],select {
-	width:100%;
-	padding:12px 20px;
-	margin:8px 0;
-	display:inline-block;
-	border:1px solid #ccc;
-	border-radius: 4px;
-	box-sizing:border-box;
-}
-input[type=submit] {
-	width:100%;
-	background-color:#4caf50;
-	padding:14px 20px;
-	margin: 8px 0;
-	border:none;
-	border-radius:4px;
-	cursor:pointer;
-}
-input[type=submit]:hover{
-	background-color:#45a049;
-}
-div{
-	border-radius:5px;
-	background-color:#f2f2f2;
-	padding:20px;
-}
-</style>
 
 <body>
-	<div>
+	<div style="width:200px;">
 		<h2>Them nguoi dung Postgresql</h2>
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 		<label>Ho va ten</label>
@@ -45,11 +17,11 @@ div{
 	
 	<?php
 		$username=$_POST["username"];
-		$password=$POST["password"];
+		$password=$_POST["password"];
 	
 		function pg_connection_string_from_database_url(){
 			extract(parse_url($ENV["DATABASE_URL"]));
-			return "user=$user password=$pass host=$host dbname=".substr($path,1);
+			return "user=$user password=$pass host=$host dbname=" .substr($path,1);
 		}	
 		
 		$db = pg_connect(pg_connection_string_from_database_url());
