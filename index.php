@@ -31,7 +31,7 @@ div{
 
 <body>
 	<div>
-		<form>
+		<form action="welcome_get.php" method="get">
 			<label>Ho va ten</label>
 			<input type="text" name="fullname" placeholder="Nhap ho va ten">
 			<label>Dia chi</label>
