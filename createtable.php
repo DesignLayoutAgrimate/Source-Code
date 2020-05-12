@@ -21,7 +21,7 @@ function pg_connection_string_from_database_url(){
 	EOF;
 	
 	$ret = pg_query($db, $sql);
-	if($ret){
+	if(!$ret){
 		echo pg_last_error($db);
 	}else{
 		echo "Table created successfully\n";
