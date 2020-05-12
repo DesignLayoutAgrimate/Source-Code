@@ -8,13 +8,13 @@ function pg_connection_string_from_database_url(){
 	if(!$db){
 		echo  "Error : Unable to open database \n";
 	}else{
-		echo  "Opened database successfully";
+		echo  "Opened database successfully\n";
 	}
 	
 	$sql = "CREATE TABLE MyAccounts (username CHAR(10) PRIMARY KEY NOT NULL,
 	password CHAR(50))";
 	
-	print "$sql";
+	print "$sql \n";
 	
 	$ret = pg_query($db, $sql);
 	if(!$ret){
