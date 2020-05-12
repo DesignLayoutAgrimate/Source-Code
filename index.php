@@ -41,5 +41,7 @@ div{
 			<input type="submit" value="Gui">
 		</form>
 	</div>
+	<br><a href="add_account.php">Them nguoi dung</a>
+	<br><a href="list_account.php">Danh sach nguoi dung</a>
 </body>
 </html>
