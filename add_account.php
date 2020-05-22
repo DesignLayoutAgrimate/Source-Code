@@ -43,7 +43,11 @@
 					
 					$ret = pg_query($db,$sql);
 					if(!$ret){
+						
+						echo '<div class="alert alert-info" style="text-align:center;padding-top:10px;">';
 						echo pg_last_error($db);
+						echo '</div>';
+						
 					}else{
 						echo '<div class="alert alert-info" style="text-align:center;padding-top:10px;">';
 						echo '<strong>Insert successfully</strong>';
@@ -55,13 +59,11 @@
 
 
 
-
-
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" role="form">
 					<legend>Add account Postgresql</legend>
 				
 					<div class="form-group">
-						<label for="">Fullname</label>
+						<label for="">Username</label>
 						<input class="form-control" type="text" name="username" 
 						placeholder="Enter fullname" value="<?php echo $username; ?>">
 					</div>
@@ -76,8 +78,6 @@
 				</form>
 
 
-
-				
 
 				<br>
 				<a class="btn btn-lg btn-danger" href="index.php" role="button">Quay lại trang chủ</a>
