@@ -34,9 +34,9 @@
 					$sql = "CREATE TABLE IF NOT EXISTS MyAccounts (username CHAR(10) PRIMARY KEY NOT NULL,
 					password CHAR(50))";
 					
-					print '<div class="alert alert-warning" style="text-align:center;padding-top:10px;">';
-					print '<strong>$sql</strong>';
-					print '</div>';
+					echo '<div class="alert alert-warning" style="text-align:center;padding-top:10px;">';
+					print '$sql';
+					echo '</div>';
 					
 					$ret = pg_query($db, $sql);
 					if(!$ret){
