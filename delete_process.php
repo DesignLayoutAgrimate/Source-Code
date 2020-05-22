@@ -44,8 +44,13 @@
 						
 						echo '<div class="alert alert-primary" style="text-align:center;padding-top:10px;">';
 						echo '<strong>Data Deleted Successfully</strong>';
-						echo '<script type="text/javascript">window.location.href = "list_account.php";</script>';
 						echo '</div>';
+
+						echo '<script type="text/javascript">
+						redirectTime = "1500";
+						redirectURL = "list_account.php";
+						setTimeout("location.href = redirectURL;",redirectTime);
+						</script>';
 					}
 					
 					pg_close($db);

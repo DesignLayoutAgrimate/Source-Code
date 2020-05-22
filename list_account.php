@@ -80,7 +80,10 @@
 								<td><?php echo $myrow['username']; ?></td>
 								<td><?php echo $myrow['password']; ?></td>
 								<td>
-									<a href="delete_process.php?username=<?php echo $myrow["username"]; ?>">Delete</a>
+									<a class="btn btn-sm btn-danger" 
+									href="delete_process.php?username=<?php echo $myrow["username"]; ?>">
+										Delete
+									</a>
 								</td>
 							</tr>
 
