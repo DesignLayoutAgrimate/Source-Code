@@ -11,7 +11,7 @@ function pg_connection_string_from_database_url(){
 		echo  "Opened database successfully\n";
 	}
 	
-	$sql = "CREATE TABLE MyAccounts (username CHAR(10) PRIMARY KEY NOT NULL,
+	$sql = "CREATE TABLE IF NOT EXISTS MyAccounts (username CHAR(10) PRIMARY KEY NOT NULL,
 	password CHAR(50))";
 	
 	print "$sql \n";

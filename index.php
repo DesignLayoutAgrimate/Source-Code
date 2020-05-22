@@ -20,7 +20,7 @@
   
   <!-- card-columns -->
   <div class="card-columns" style="margin-top:10px;">
-    <a href="index.php">
+    <a href="setup.php">
       <div class="card bg-info">
         <div class="card-body text-center">
           <h1 class="card-text">Create table</h1>
