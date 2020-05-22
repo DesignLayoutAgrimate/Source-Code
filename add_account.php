@@ -43,7 +43,7 @@
 					
 					$ret = pg_query($db,$sql);
 					if(!$ret){
-						
+
 						echo '<div class="alert alert-info" style="text-align:center;padding-top:10px;">';
 						echo pg_last_error($db);
 						echo '</div>';
@@ -80,7 +80,7 @@
 
 
 				<br>
-				<a class="btn btn-lg btn-danger" href="index.php" role="button">Quay lại trang chủ</a>
+				<a class="btn btn-sm btn-danger" href="index.php" role="button">Quay lại trang chủ</a>
 				
 			</div>
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>

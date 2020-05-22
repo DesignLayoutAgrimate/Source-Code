@@ -9,7 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
-<body >
+<body>
 
 	<div class="container" style="margin-top:10px;">
 		<div class="row">
@@ -53,7 +53,7 @@
 
 				<br>
 
-				<a class="btn btn-lg btn-danger" href="index.php" role="button">Quay lại trang chủ</a>
+				<a class="btn btn-sm btn-danger" href="index.php" role="button">Quay lại trang chủ</a>
 				
 			</div>
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
