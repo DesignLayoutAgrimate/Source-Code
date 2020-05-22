@@ -35,7 +35,7 @@
 					password CHAR(50))";
 					
 					echo '<div class="alert alert-warning" style="text-align:center;padding-top:10px;">';
-					print '$sql';
+					print "$sql";
 					echo '</div>';
 					
 					$ret = pg_query($db, $sql);
