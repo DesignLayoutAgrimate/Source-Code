@@ -8,7 +8,9 @@ function pg_connection_string_from_database_url(){
 	if(!$db){
 		echo  "Error : Unable to open database \n";
 	}else{
-		echo  "Opened database successfully\n";
+		echo '<div class="alert alert-info" style="text-align:center;">';
+		echo '<strong>Opened database successfully</strong>';
+		echo '</div>';
 	}
 	
 	$sql = "CREATE TABLE IF NOT EXISTS MyAccounts (username CHAR(10) PRIMARY KEY NOT NULL,

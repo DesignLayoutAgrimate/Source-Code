@@ -16,7 +16,7 @@
 </head>
 <body >
 
-<div class="container" style="padding-top:10px;">
+<div class="container" style="padding-top:10px;text-align: ">
   
   <!-- card-columns -->
   <div class="card-columns" style="margin-top:10px;">
