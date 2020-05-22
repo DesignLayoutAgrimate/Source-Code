@@ -52,6 +52,7 @@
 				<table class="table table-bordered table-hover">
 					<thead>
 						<tr>
+							<th>No.</th>
 							<th>Username</th>
 							<th>Password</th>
 							<th>Option</th>
@@ -61,11 +62,11 @@
 
 
 						<?php
-							while($myrow = pg_fetch_assoc($ret)){
-								printf("<tr><td>%s</td> <td>%s</td></tr>", 
-								$myrow['username'],$myrow['password']);
-							}
-							pg_close($db);
+							// while($myrow = pg_fetch_assoc($ret)){
+							// 	printf("<tr><td>%s</td> <td>%s</td></tr>", 
+							// 	$myrow['username'],$myrow['password']);
+							// }
+							// pg_close($db);
 						?>
 
 
@@ -79,7 +80,7 @@
 								<td><?php echo $myrow['username']; ?></td>
 								<td><?php echo $myrow['password']; ?></td>
 								<td>
-									<a href="delete_process.php?username=<?php echo $row["username"]; ?>">Delete</a>
+									<a href="delete_process.php?username=<?php echo $myrow["username"]; ?>">Delete</a>
 								</td>
 							</tr>
 
