@@ -71,7 +71,7 @@
 
 
 						<?php
-						$i=0;
+						$i=1;
 						while($myrow=pg_fetch_assoc($ret)) {
 						?>
 
