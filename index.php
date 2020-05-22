@@ -42,7 +42,7 @@ body {
 </div>
 
 <div style="padding-left:16px">
-  <img src="https://ibb.co/qnFYJPX" class="img-responsive" alt="Image">
+  <a href="https://ibb.co/qnFYJPX"><img src="https://i.ibb.co/qnFYJPX/dich-vu-cloud-computing-600x480.jpg" alt="dich-vu-cloud-computing-600x480" border="0" /></a>
 </div>
 
 </body>
