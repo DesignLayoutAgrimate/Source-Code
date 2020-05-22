@@ -52,6 +52,12 @@
 						echo '<div class="alert alert-info" style="text-align:center;padding-top:10px;">';
 						echo '<strong>Insert successfully</strong>';
 						echo '</div>';
+
+						echo '<script type="text/javascript">
+						redirectTime = "1000";
+						redirectURL = "list_account.php";
+						setTimeout("location.href = redirectURL;",redirectTime);
+						</script>';
 					}	
 					
 					pg_close($db);

@@ -47,7 +47,7 @@
 						echo '</div>';
 
 						echo '<script type="text/javascript">
-						redirectTime = "1500";
+						redirectTime = "1000";
 						redirectURL = "list_account.php";
 						setTimeout("location.href = redirectURL;",redirectTime);
 						</script>';
