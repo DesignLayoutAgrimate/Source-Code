@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-input[type=text],select {
-	width:100%;
-	padding:12px 20px;
-	margin:8px 0;
-	display:inline-block;
-	border:1px solid #ccc;
-	border-radius: 4px;
-	box-sizing:border-box;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-input[type=submit] {
-	width:100%;
-	background-color:#4caf50;
-	padding:14px 20px;
-	margin: 8px 0;
-	border:none;
-	border-radius:4px;
-	cursor:pointer;
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
-input[type=submit]:hover{
-	background-color:#45a049;
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-div{
-	border-radius:5px;
-	background-color:#f2f2f2;
-	padding:20px;
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
 }
 </style>
-
+</head>
 <body>
-	<div>
-		<form action="welcome_get.php" method="get">
-			<label>Ho va ten</label>
-			<input type="text" name="fullname" placeholder="Nhap ho va ten">
-			<label>Dia chi</label>
-			<input type="text" name="address" placeholder="Nhap dia chi">
-			<label>Email</label>
-			<input type="text" name="email" placeholder="Nhap email">
-			<input type="submit" value="Gui">
-		</form>
-	</div>
-	<br><a href="add_account.php">Them nguoi dung</a>
-	<br><a href="list_account.php">Danh sach nguoi dung</a>
+
+<div class="topnav">
+  <a class="active" href="#home">Trang chủ</a>
+  <a href="#news">Thêm tài khoản</a>
+  <a href="#contact">Danh sách tài khoản</a>
+</div>
+
+<div style="padding-left:16px">
+  <img src="https://ibb.co/qnFYJPX" class="img-responsive" alt="Image">
+</div>
+
 </body>
 </html>
+
