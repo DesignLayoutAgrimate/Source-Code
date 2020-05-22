@@ -11,7 +11,7 @@
 </head>
 <body >
 
-	<div class="container-fluid">
+	<div class="container" style="margin-top:10px;">
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -34,9 +34,9 @@
 					$sql = "CREATE TABLE IF NOT EXISTS MyAccounts (username CHAR(10) PRIMARY KEY NOT NULL,
 					password CHAR(50))";
 					
-					echo '<div class="alert alert-warning" style="text-align:center;padding-top:10px;">';
-					echo '<strong>$sql</strong>';
-					echo '</div>';
+					print '<div class="alert alert-warning" style="text-align:center;padding-top:10px;">';
+					print '<strong>$sql</strong>';
+					print '</div>';
 					
 					$ret = pg_query($db, $sql);
 					if(!$ret){
