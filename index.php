@@ -36,13 +36,14 @@ body {
 <body>
 
 <div class="topnav">
-  <a class="active" href="#home">Trang chủ</a>
-  <a href="#news">Thêm tài khoản</a>
-  <a href="#contact">Danh sách tài khoản</a>
+  <a class="index.php" href="#home">Trang chủ</a>
+  <a href="add_account.php">Thêm tài khoản</a>
+  <a href="list_account.php">Danh sách tài khoản</a>
 </div>
 
 <div style="padding-left:16px">
-  <a href="https://ibb.co/qnFYJPX"><img src="https://i.ibb.co/qnFYJPX/dich-vu-cloud-computing-600x480.jpg" alt="dich-vu-cloud-computing-600x480" border="0" /></a>
+  	<img src="https://i.ibb.co/qnFYJPX/dich-vu-cloud-computing-600x480.jpg" border="0"
+  	class="img-responsive"/>
 </div>
 
 </body>
