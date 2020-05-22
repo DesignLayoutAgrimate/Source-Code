@@ -50,10 +50,10 @@
 					
 					pg_close($db);
 				?>
-				
+
 				<br>
 
-				<a class="btn btn-lg btn-default" href="index.php" role="button">Quay lại trang chủ</a>
+				<a class="btn btn-lg btn-danger" href="index.php" role="button">Quay lại trang chủ</a>
 				
 			</div>
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
