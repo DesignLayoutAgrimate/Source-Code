@@ -13,93 +13,50 @@
 
 	<div class="container" style="margin-top:10px;">
 		<div class="row">
-			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
-			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
 				<?php
-	
 					function pg_connection_string_from_database_url(){
 						extract(parse_url($_ENV["DATABASE_URL"]));
 						return "user=$user password=$pass host=$host dbname=" .substr($path,1);
-					}	
-					
+					}
+
 					$db = pg_connect(pg_connection_string_from_database_url());
 					if(!$db){
-						echo "Error : Unable to open database\n";
+						echo  "Error : Unable to open database \n";
 					}else{
 						echo '<div class="alert alert-info" style="text-align:center;padding-top:10px;">';
 						echo '<strong>Opened database successfully</strong>';
 						echo '</div>';
 					}
 					
-					$sql = "SELECT * FROM MyAccounts";
+					$sql = "DELETE FROM MyAccounts WHERE username='" . $_GET["username"] . "'";
 					
 					echo '<div class="alert alert-warning" style="text-align:center;padding-top:10px;">';
 					print "$sql";
 					echo '</div>';
 					
-					$ret = pg_query($db,$sql);
-
+					$ret = pg_query($db, $sql);
 					if(!$ret){
-						echo '<div class="alert alert-info" style="text-align:center;padding-top:10px;">';
 						echo pg_last_error($db);
+					}else{
+						
+						echo '<div class="alert alert-primary" style="text-align:center;padding-top:10px;">';
+						echo '<strong>Data Deleted Successfully</strong>';
+						echo '<script type="text/javascript">window.location.href = "list_account.php";</script>';
 						echo '</div>';
-						exit();
 					}
+					
+					pg_close($db);
 				?>
 
-
-				<table class="table table-bordered table-hover">
-					<thead>
-						<tr>
-							<th>Username</th>
-							<th>Password</th>
-							<th>Option</th>
-						</tr>
-					</thead>
-					<tbody>
-
-
-						<?php
-							while($myrow = pg_fetch_assoc($ret)){
-								printf("<tr><td>%s</td> <td>%s</td></tr>", 
-								$myrow['username'],$myrow['password']);
-							}
-							pg_close($db);
-						?>
-
-
-						<?php
-						$i=0;
-						while($myrow=pg_fetch_assoc($ret)) {
-						?>
-
-							<tr>
-								<td><?php echo $i++; ?></td>
-								<td><?php echo $myrow['username']; ?></td>
-								<td><?php echo $myrow['password']; ?></td>
-								<td>
-									<a href="delete_process.php?username=<?php echo $row["username"]; ?>">Delete</a>
-								</td>
-							</tr>
-
-						<?php
-						pg_close($db);
-						}
-						?>
-
-
-					</tbody>
-				</table>
-
-
-
+				<!-- <br>
 				
-				<br>
-				<a class="btn btn-sm btn-danger" href="index.php" role="button">Quay lại trang chủ</a>
+				<a class="btn btn-sm btn-danger" href="index.php" role="button">Quay lại trang chủ</a> -->
 				
 			</div>
-			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 		</div>
 	</div>
 
