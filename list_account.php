@@ -81,6 +81,7 @@
 								<td><?php echo $myrow['password']; ?></td>
 								<td>
 									<a class="btn btn-sm btn-danger" 
+									onclick="return confirm('Are you sure you want to delete this item?');"
 									href="delete_process.php?username=<?php echo $myrow["username"]; ?>">
 										Delete
 									</a>

@@ -44,7 +44,7 @@
 					$ret = pg_query($db,$sql);
 					if(!$ret){
 
-						echo '<div class="alert alert-info" style="text-align:center;padding-top:10px;">';
+						echo '<div class="alert alert-danger" style="text-align:center;padding-top:10px;">';
 						echo pg_last_error($db);
 						echo '</div>';
 						
@@ -65,7 +65,8 @@
 
 
 
-				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" role="form">
+				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST"
+				name="myForm" onsubmit="return validateForm()">
 					<legend>Add account Postgresql</legend>
 				
 					<div class="form-group">
@@ -92,6 +93,21 @@
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		function validateForm() {
+		  var username = document.forms["myForm"]["username"].value;
+		  var password = document.forms["myForm"]["password"].value;
+		  if (username == "") {
+		    alert("Enter username");
+		    return false;
+		  }
+		  if (password == "") {
+		    alert("Enter password");
+		    return false;
+		  }
+		}
+	</script>
 
 </body>
 </html>
